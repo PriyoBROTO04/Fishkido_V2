@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+
+    @font-face {
+        font-family: 'the-bold-font';
+        src: url(./build/assets/fonts/THEBOLDFONT.ttf);
+    }
+}
+
+.project.active ~ .navIndicator {
+    transform: translateX(calc(8rem * 1));
+}
+.goal.active ~ .navIndicator {
+    transform: translateX(calc(7.7rem * 2));
+}
+.gallery.active ~ .navIndicator {
+    transform: translateX(calc(7.4rem * 3));
+}
+/* .navIndicator{
+    transform: translateX(calc(96px * 1));
+} */
