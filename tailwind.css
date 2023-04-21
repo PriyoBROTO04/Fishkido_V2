@@ -5,18 +5,30 @@
 
     @font-face {
         font-family: 'the-bold-font';
-        src: url(./build/assets/fonts/THEBOLDFONT.ttf);
+        src: url(../assets/fonts/THEBOLDFONT.ttf);
     }
 }
 
 .project.active ~ .navIndicator {
-    transform: translateX(calc(8rem * 1));
+    transform: translateX(calc(5.2rem * 1));
 }
 .goal.active ~ .navIndicator {
-    transform: translateX(calc(7.7rem * 2));
+    transform: translateX(calc(5.1rem * 2));
 }
 .gallery.active ~ .navIndicator {
-    transform: translateX(calc(7.4rem * 3));
+    transform: translateX(calc(4.9rem * 3));
+}
+@media screen and (min-width:1024px) {
+    .project.active ~ .navIndicator {
+        transform: translateX(calc(9.5rem * 1));
+    }
+    .goal.active ~ .navIndicator {
+        transform: translateX(calc(9.5rem * 2));
+    }
+    .gallery.active ~ .navIndicator {
+        transform: translateX(calc(9.5rem * 3));
+    }
+    
 }
 /* .navIndicator{
     transform: translateX(calc(96px * 1));
