@@ -18,7 +18,7 @@
     <title>Document</title>
   </head>
   <body
-    class="flex flex-col font-Inter bg-[url('../assets/images/mobile.webp')] sm:bg-[url('../assets/images/tablet.webp')] lg:bg-[url('../assets/images/desktop.webp')] p-5 sm:p-10 bg-center bg-cover bg-no-repeat h-screen relative overflow-hidden backdrop-brightness-90"
+    class="overflow-hidden flex flex-col font-Inter bg-[url('../assets/images/mobile.webp')] sm:bg-[url('../assets/images/tablet.webp')] lg:bg-[url('../assets/images/desktop.webp')] p-5 sm:p-10 bg-center bg-cover bg-no-repeat h-screen relative backdrop-brightness-90"
   >
     <img
       src="./assets/images/noise-mobile.svg"
@@ -31,11 +31,13 @@
       alt=""
     />
     <header class="w-full max-w-[1600px] mx-auto flex justify-between">
-      <div class="bg-Soft-pink w-14 sm:w-16 lg:w-[4.5rem] rounded-2xl overflow-hidden flex justify-center items-end  backdrop-blur-xl">
-        <img src="./assets/images/logo.svg"  alt="" />
+      <div
+        class="bg-Soft-pink w-14 sm:w-16 lg:w-[4.5rem] rounded-2xl overflow-hidden flex justify-center items-end backdrop-blur-xl"
+      >
+        <img src="./assets/images/logo.svg" alt="" />
       </div>
       <nav
-        class="hidden  sm:flex items-center w-[20rem] lg:w-[38rem] backdrop-blur-[100px] overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 lg:px-11 lg:py-5 text-white text-lg lg:text-2xl"
+        class="hidden sm:flex items-center w-[20rem] lg:w-[38rem] backdrop-blur-[100px] overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 lg:px-11 lg:py-5 text-white text-lg lg:text-2xl"
       >
         <div class="navItems home hover:drop-shadow-xl transition-all">
           <a href="#"> Home</a>
@@ -46,8 +48,8 @@
         <div class="navItems goal hover:drop-shadow-xl transition-all">
           <a href="#"> Goals</a>
         </div>
-        <div class="navItems gallery hover:drop-shadow-xl transition-all">
-          <a href="#"> Gallery</a>
+        <div class="navItems contact hover:drop-shadow-xl transition-all">
+          <a href="#"> Contact</a>
         </div>
         <div
           class="navIndicator w-24 h-12 lg:w-32 lg:h-[4.3rem] transition-all duration-150 bg-pink absolute rounded-3xl top-0 lg:-top-2 -left-4 lg:left-2 -z-10 blur-[15px]"
@@ -62,7 +64,7 @@
       </button>
     </header>
     <nav
-      class="sm:hidden flex w-[20rem] z-50 backdrop-blur-xl overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 text-white text-lg fixed bottom-6 left-1/2 -translate-x-1/2"
+      class="sm:hidden mobileNav flex w-[20rem] z-50 backdrop-blur-xl overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 text-white text-lg fixed bottom-6 left-1/2 -translate-x-1/2 transition-all duration-150"
     >
       <div class="navItems home hover:drop-shadow-lg transition-all">
         <a href="#"> Home</a>
@@ -73,23 +75,27 @@
       <div class="navItems goal hover:drop-shadow-lg transition-all">
         <a href="#"> Goals</a>
       </div>
-      <div class="navItems gallery hover:drop-shadow-lg transition-all">
-        <a href="#"> Gallery</a>
+      <div class="navItems contact hover:drop-shadow-lg transition-all">
+        <a href="#"> Contact</a>
       </div>
       <div
         class="navIndicator w-24 h-12 transition-all duration-150 bg-pink absolute top-0 -left-4 -z-10 blur-[15px]"
       ></div>
     </nav>
 
-    <main class="flex justify-start items-stretch flex-1 relative overflow-hidden  w-full max-w-[1600px] mx-auto">
+    <main
+      class="flex justify-start items-center flex-1 relative overflow-hidden w-full max-w-[1600px] mx-auto"
+    >
       <!-- HOME SECTION -->
-      <section class=" absolute w-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center space-y-4">
+      <section
+        class="homeSection  absolute -translate-x-0 w-full flex justify-center flex-col text-center space-y-4"
+      >
         <h1
           class="text-white text-[3.2rem] sm:text-8xl lg:text-9xl font-the-bold-font"
         >
           I'M <span class="text-pastel">FISHKIDO</span>
         </h1>
-        <p class="text-white sm:text-2xl sm:max-w-2xl lg:max-w-4xl">
+        <p class="text-white sm:text-2xl sm:max-w-2xl lg:max-w-4xl mx-auto">
           I am a male 13 year old Discord.js Developer Currently living in
           Northern Ireland and I love meeting new people<br />I am a massive dog
           lover!
@@ -100,31 +106,39 @@
           <div
             class="link bg-white flex items-center justify-center rounded-full scale-90 relative top-2 sm:right-1 sm:top-2"
           >
-            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="text-Dark-blue lg:text-red fa-brands fa-github"></i></a>
           </div>
           <div
             class="link bg-white flex items-center justify-center rounded-full scale-125"
           >
-            <a href=""><i class="fa-brands fa-discord"></i></a>
+            <a href=""><i class="text-Dark-blue lg:text-red fa-brands fa-discord"></i></a>
           </div>
           <div
             class="link bg-white flex items-center justify-center rounded-full scale-75 relative right-5 -top-2 sm:right-7 sm:-top-2"
           >
-            <a href=""><i class="fa-solid fa-envelope"></i></a>
+            <a href=""><i class="text-Dark-blue lg:text-red fa-solid fa-envelope"></i></a>
           </div>
           <div
             class="link bg-white flex items-center justify-center rounded-full relative right-7 -top-1 sm:right-9"
           >
-            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="text-Dark-blue lg:text-red fa-brands fa-twitter"></i></a>
           </div>
         </div>
       </section>
 
       <!-- PROJECTS SECTION -->
-      <section class="translate-y-full w-full mt-10 overflow-y-auto grid gap-5 grid-cols-[repeat(auto-fill,minmax(20rem,1fr))]">
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
+      <section
+        class=" projectSection opacity-0 w-full h-[90%] mt-10 overflow-y-auto grid gap-5 grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] auto-rows-min self-start"
+      >
+        <div
+          class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
+        >
           <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
+            <img
+              class="w-[14%]"
+              src="./assets/logos/Designer Academy.png"
+              alt=""
+            />
           </div>
           <div class="flex flex-col gap-3">
             <div class="text-3xl font-bold tracking-wide">Design Academy</div>
@@ -137,185 +151,100 @@
                 <div class="text-sm opacity-50 tracking-wide">Member Since</div>
                 <div class="text-sm">12 December, 2023</div>
               </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
+              <button
+                class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium"
+              >
+                Visit
+              </button>
             </div>
           </div>
         </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
+      </section>
+
+      <!-- GOALS SECTION -->
+      <section class=" goalSection opacity-0 absolute flex justify-center items-center w-full self-center">
+        <div
+          class="h-[30rem] sm:h-[36rem] min-w-[20rem] sm:min-w-[28rem] bg-White rounded-xl p-5 text-white shadow-xl space-y-7"
+        >
+
+
+
+
+
+
+          <div class="completed space-y-2">
+            <div class="text-sm tracking-wide opacity-70">Completed</div>
+            <div class="completedTasks space-y-2">
+              
+              
+              <div
+                class="border border-yellow flex items-center gap-4 bg-gradient-to-l from-[#B39488] via-[#B3A483] to-[#B39488] p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">New Heights</div>
+                  <div class="text-xs sm:text-sm">Staff in a server with 1k+ members</div>
+                </div>
+              </div>
+              <div
+                class="border border-yellow flex items-center gap-4 bg-gradient-to-l from-[#B39488] via-[#B3A483] to-[#B39488] p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">New Heights</div>
+                  <div class="text-xs sm:text-sm">Staff in a server with 1k+ members</div>
+                </div>
+              </div>
+              
+              
+            </div>
           </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
+
+
+
+
+
+
+
+
+
+          <div class="ongoing space-y-2">
+            <div class="text-sm tracking-wide opacity-70">Ongoing</div>
+            <div class="completedTasks space-y-2">
+              
+              
+              <div
+                class="border border-[#B59D9D] flex items-center gap-4 bg-Dark-blue p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">New Heights</div>
+                  <div class="text-xs sm:text-sm">Staff in a server with 1k+ members</div>
+                </div>
               </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
+
             </div>
           </div>
         </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        <div class="card bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border shadow-xl">
-          <div>
-            <img class="w-[14%]" src="./assets/logos/Designer Academy.png" alt="">
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
-              <button class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium">Visit</button>
-            </div>
-          </div>
-        </div>
-        
       </section>
     </main>
 
-    <script src="./scripts/script.js"></script>
+    
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/2.0.0/jquery.mobile-events.min.js"> </script>
+  <script src="./scripts/script.js"></script>
 </html>
