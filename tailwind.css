@@ -11,6 +11,13 @@
 ::-webkit-scrollbar{
     width: 0;
 }
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 .projectSection{
     --maskTop:100;
     --maskBottom:0;
@@ -33,6 +40,22 @@
 }
 .card{
     opacity: 0;
+}
+.homeSection.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+.goalSection.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+.projectSection.active{
+    pointer-events: auto;
+    opacity: 1;
+}
+.contactSection.active{
+    pointer-events: auto;
+    opacity: 1;
 }
 .projectSection.active .card{
     animation-name: cardIn;

@@ -18,7 +18,7 @@
     <title>Document</title>
   </head>
   <body
-    class="overflow-hidden flex flex-col font-Inter bg-[url('../assets/images/mobile.webp')] sm:bg-[url('../assets/images/tablet.webp')] lg:bg-[url('../assets/images/desktop.webp')] p-5 sm:p-10 bg-center bg-cover bg-no-repeat h-screen relative backdrop-brightness-90"
+    class="overflow-hidden flex flex-col font-Inter bg-[url('../assets/images/mobile.webp')] sm:bg-[url('../assets/images/tablet.webp')] lg:bg-[url('../assets/images/desktop.webp')] p-5 sm:p-10 bg-center bg-cover bg-no-repeat h-[100dvh] relative backdrop-brightness-90"
   >
     <img
       src="./assets/images/noise-mobile.svg"
@@ -64,7 +64,7 @@
       </button>
     </header>
     <nav
-      class="sm:hidden mobileNav flex w-[20rem] z-50 backdrop-blur-xl overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 text-white text-lg fixed bottom-6 left-1/2 -translate-x-1/2 transition-all duration-150"
+      class="sm:hidden mobileNav flex w-[20rem] z-50 backdrop-blur-xl overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 text-white text-lg fixed bottom-6 left-1/2 -translate-x-1/2 transition-all ease-in-out duration-500"
     >
       <div class="navItems home hover:drop-shadow-lg transition-all">
         <a href="#"> Home</a>
@@ -88,7 +88,7 @@
     >
       <!-- HOME SECTION -->
       <section
-        class="hidden homeSection  absolute -translate-x-0 w-full flex justify-center flex-col text-center space-y-4"
+        class="homeSection  pointer-events-none opacity-0 absolute -translate-x-0 w-full flex justify-center flex-col text-center space-y-1 sm:space-y-4 active"
       >
         <h1
           class="text-white text-[3.2rem] sm:text-8xl lg:text-9xl font-the-bold-font"
@@ -106,29 +106,29 @@
           <div
             class="link bg-white flex items-center justify-center rounded-full scale-90 relative top-2 sm:right-1 sm:top-2"
           >
-            <a href=""><i class="text-Dark-blue lg:text-red fa-brands fa-github"></i></a>
+            <a href="https://github.com/mrfishkido123" target="_blank"><i class="text-Dark-blue lg:text-red fa-brands fa-github"></i></a>
           </div>
           <div
             class="link bg-white flex items-center justify-center rounded-full scale-125"
           >
-            <a href=""><i class="text-Dark-blue lg:text-red fa-brands fa-discord"></i></a>
+            <a href="https://discord.com/users/534064040788492295/534064040788492295" target="_blank"><i class="text-Dark-blue lg:text-red fa-brands fa-discord"></i></a>
           </div>
           <div
             class="link bg-white flex items-center justify-center rounded-full scale-75 relative right-5 -top-2 sm:right-7 sm:-top-2"
           >
-            <a href=""><i class="text-Dark-blue lg:text-red fa-solid fa-envelope"></i></a>
+            <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=contact@fishkido.com" target="_blank"><i class="text-Dark-blue lg:text-red fa-solid fa-envelope"></i></a>
           </div>
           <div
             class="link bg-white flex items-center justify-center rounded-full relative right-7 -top-1 sm:right-9"
           >
-            <a href=""><i class="text-Dark-blue lg:text-red fa-brands fa-twitter"></i></a>
+            <a href="https://twitter.com/mrfishkido" target="_blank"><i class="text-Dark-blue lg:text-red fa-brands fa-twitter"></i></a>
           </div>
         </div>
       </section>
 
       <!-- PROJECTS SECTION -->
       <section
-        class=" projectSection opacity-0 w-full h-[90%] mt-10 overflow-y-auto grid gap-5 grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] auto-rows-min self-start"
+        class=" projectSection pointer-events-none  opacity-0 w-full h-[90%] mt-10 overflow-y-auto grid gap-5 grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] auto-rows-min self-start"
       >
         <div
           class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
@@ -162,9 +162,9 @@
       </section>
 
       <!-- GOALS SECTION -->
-      <section class="hidden goalSection opacity-0 absolute flex justify-center items-center w-full self-center">
+      <section class="goalSection pointer-events-none opacity-0 absolute flex justify-center items-center w-full self-center">
         <div
-          class="h-[30rem] sm:h-[36rem] min-w-[20rem] sm:min-w-[28rem] bg-White rounded-xl p-5 text-white shadow-xl space-y-7"
+          class="h-[30rem] sm:h-[36rem] w-full sm:w-[28rem] bg-White rounded-xl p-5 text-white shadow-xl space-y-7"
         >
 
 
@@ -241,22 +241,22 @@
       </section>
 
       <!-- CONTACT SECTION -->
-      <section class="contactSection absolute flex justify-center items-center w-full self-center">
-        <div class="h-[30rem] sm:h-fit min-w-[20rem] sm:min-w-[35rem] bg-White rounded-xl p-7 text-white shadow-xl space-y-7">
-          <form action="" class="flex flex-col gap-4">
+      <section class="contactSection pointer-events-none opacity-0 absolute flex justify-center items-center w-full self-center">
+        <div class="h-fit sm:h-fit w-full sm:w-[35rem] bg-White rounded-xl p-4 sm:p-7 text-white shadow-xl space-y-7">
+          <form onsubmit="sendContact(event)" class="flex flex-col gap-4">
             <div class="flex flex-col gap-2">
               <label for="inpName">Your Name/Discord</label>
-              <input required type="text" id="inpName" onkeyup="checkForNull()" autocomplete="off" class="px-4 py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
+              <input required type="text" id="inpName" onkeyup="checkForNull()" autocomplete="off" class="px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
             </div>
             <div class="flex flex-col gap-2">
               <label for="inpEmail">Your email</label>
-              <input required type="email" id="inpEmail" onkeyup="checkForNull()" autocomplete="off" class="px-4 py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
+              <input required type="email" id="inpEmail" onkeyup="checkForNull()" autocomplete="off" class="px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
             </div>
             <div class="flex flex-col gap-2">
               <label for="inpMsg">Leave a Message</label>
-              <textarea required name="" id="inpMsg" cols="30" rows="5" onkeyup="checkForNull()" class="resize-none px-4 py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all"></textarea>
+              <textarea required name="" id="inpMsg" cols="30" rows="5" onkeyup="checkForNull()" class="resize-none px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all"></textarea>
             </div>
-            <div class="buttons space-x-3 mt-5">
+            <div class="buttons space-x-3 sm:mt-5">
               <button class="bg-Off-white text-Dark-blue font-medium px-5 py-2 rounded-lg outline-none hover:shadow-lg focus:shadow-lg transition-all">Send</button>
               <button disabled class="clearBtn bg-Off-white text-Dark-blue font-medium px-5 py-2 rounded-lg opacity-80 hover:shadow-lg focus:shadow-lg transition-all" onclick="clearText()">Clear</button>
             </div>
