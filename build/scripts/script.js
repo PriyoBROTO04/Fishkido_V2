@@ -15,6 +15,9 @@ const inpName = document.querySelector("#inpName");
 const inpEmail = document.querySelector("#inpEmail");
 const inpMsg = document.querySelector("#inpMsg");
 const clearBtn = document.querySelector(".clearBtn");
+const dialogue = document.querySelector(".dialogue");
+const overlay = document.querySelector(".overlay");
+const dialogueClose = document.querySelector(".dialogueClose");
 
 function activelink() {
   navItems.forEach((item) => {
@@ -203,10 +206,8 @@ async function sendContact(e) {
       },
     ],
   };
-  var _0x102a = [
-    "\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x69\x73\x63\x6F\x72\x64\x2E\x63\x6F\x6D\x2F\x61\x70\x69\x2F\x77\x65\x62\x68\x6F\x6F\x6B\x73\x2F\x31\x31\x30\x33\x35\x39\x32\x32\x33\x30\x34\x37\x33\x36\x39\x39\x33\x34\x38\x2F\x31\x71\x39\x52\x74\x67\x66\x70\x5F\x47\x31\x45\x6A\x32\x37\x52\x74\x54\x79\x57\x4E\x61\x31\x50\x64\x53\x6D\x42\x79\x32\x41\x70\x63\x47\x41\x4A\x34\x73\x42\x73\x4E\x48\x4A\x4D\x5A\x5F\x6A\x43\x73\x35\x72\x39\x6B\x32\x4B\x68\x64\x4A\x4A\x67\x35\x65\x74\x66\x66\x57\x78\x77",
-  ];
-  const webhookURL = _0x102a[0];
+
+  const webhookURL="https://discord.com/api/webhooks/1103677235103273022/H3eT6mjI_qXFFGX7cjiBdaI1Z_h-PMyJn2mvqk7NiodzKiAvzMkYltjXu9JkEByiD76i";
 
   const response = await fetch(webhookURL, {
     method: "POST",
@@ -217,10 +218,11 @@ async function sendContact(e) {
   });
 
   if (response.ok) {
-    alert(
-      "I have received your message! I will reach out to you soon over your Email/Discord :)"
-    );
-    location.reload();
+    dialogue.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    dialogueClose.addEventListener('click',()=>{
+      location.reload();
+    })
   } else {
     alert("There was an error! Try again later!");
   }
