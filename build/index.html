@@ -4,23 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script
       src="https://kit.fontawesome.com/4381e7e1ab.js"
       crossorigin="anonymous"
     ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/png">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Fishkido</title>
   </head>
   <body
     class="overflow-hidden flex flex-col font-Inter bg-[url('../assets/images/mobile.webp')] sm:bg-[url('../assets/images/tablet.webp')] lg:bg-[url('../assets/images/desktop.webp')] p-5 sm:p-10 bg-center bg-cover bg-no-repeat h-[100dvh] relative backdrop-brightness-90"
   >
-    <div class="overlay hidden bg-black opacity-80 w-full h-full absolute inset-0 z-20"></div>
+    <div class="overlay hidden bg-black opacity-80 w-full h-full absolute inset-0 z-30"></div>
     <img
       src="./assets/images/noise-mobile.svg"
       class="sm:hidden -z-10 opacity-10 absolute w-full top-0 left-0"
@@ -40,44 +41,46 @@
       <nav
         class="hidden sm:flex items-center w-[20rem] lg:w-[38rem] backdrop-blur-[100px] overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 lg:px-11 lg:py-5 text-white text-lg lg:text-2xl"
       >
-        <div class="navItems home hover:drop-shadow-xl transition-all">
-          <a href="#"> Home</a>
+        <div class="navItems cursor-pointer home hover:drop-shadow-xl transition-all">
+          <a> Home</a>
         </div>
-        <div class="navItems project hover:drop-shadow-xl transition-all">
-          <a href="#"> Projects</a>
+        <div class="navItems cursor-pointer project hover:drop-shadow-xl transition-all">
+          <a> Projects</a>
         </div>
-        <div class="navItems goal hover:drop-shadow-xl transition-all">
-          <a href="#"> Goals</a>
+        <div class="navItems cursor-pointer goal hover:drop-shadow-xl transition-all">
+          <a> Goals</a>
         </div>
-        <div class="navItems contact hover:drop-shadow-xl transition-all">
-          <a href="#"> Contact</a>
+        <div class="navItems cursor-pointer contact hover:drop-shadow-xl transition-all">
+          <a> Contact</a>
         </div>
         <div
           class="navIndicator w-24 h-12 lg:w-32 lg:h-[4.3rem] transition-all duration-150 bg-pink absolute rounded-3xl top-0 lg:-top-2 -left-4 lg:left-2 -z-10 blur-[15px]"
         ></div>
       </nav>
-      <button
-        class="bg-Soft-pink relative z-10 backdrop-blur-2xl rounded-2xl flex justify-center items-center px-[1rem] lg:px-[1.3rem] border border-brown"
-      >
-        <i
-          class="mr-[0.1rem] text-white text-xl lg:text-2xl fa-solid fa-arrow-right-to-bracket"
-        ></i>
-      </button>
+      <a href="http://85.239.230.231:10050/">
+        <button
+          class="bg-Soft-pink h-full z-10 backdrop-blur-2xl rounded-2xl flex justify-center items-center px-[1rem] lg:px-[1.3rem] border border-brown"
+        >
+          <i
+            class="mr-[0.1rem] text-white text-xl lg:text-2xl fa-solid fa-arrow-right-to-bracket"
+          ></i>
+        </button>
+      </a>
     </header>
     <nav
-      class="sm:hidden mobileNav flex w-[20rem] z-50 backdrop-blur-xl overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 text-white text-lg fixed bottom-6 left-1/2 -translate-x-1/2 transition-all ease-in-out duration-500"
+      class="sm:hidden mobileNav flex w-[20rem] z-20 backdrop-blur-xl overflow-hidden bg-Soft-pink rounded-2xl shadow-lg border border-brown justify-between px-5 py-4 text-white text-lg fixed bottom-6 left-1/2 -translate-x-1/2 transition-all ease-in-out duration-500"
     >
-      <div class="navItems home hover:drop-shadow-lg transition-all">
-        <a href="#"> Home</a>
+      <div class="navItems cursor-pointer home hover:drop-shadow-lg transition-all">
+        <a> Home</a>
       </div>
-      <div class="navItems project hover:drop-shadow-lg transition-all">
-        <a href="#"> Projects</a>
+      <div class="navItems cursor-pointer project hover:drop-shadow-lg transition-all">
+        <a> Projects</a>
       </div>
-      <div class="navItems goal hover:drop-shadow-lg transition-all">
-        <a href="#"> Goals</a>
+      <div class="navItems cursor-pointer goal hover:drop-shadow-lg transition-all">
+        <a> Goals</a>
       </div>
-      <div class="navItems contact hover:drop-shadow-lg transition-all">
-        <a href="#"> Contact</a>
+      <div class="navItems cursor-pointer contact hover:drop-shadow-lg transition-all">
+        <a> Contact</a>
       </div>
       <div
         class="navIndicator w-24 h-12 transition-all duration-150 bg-pink absolute top-0 -left-4 -z-10 blur-[15px]"
@@ -129,199 +132,214 @@
 
       <!-- PROJECTS SECTION -->
       <section
-        class=" projectSection pointer-events-none  opacity-0 w-full h-[90%] mt-10 overflow-y-auto grid gap-5 grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] auto-rows-min self-start"
+      class=" projectSection pointer-events-none  opacity-0 w-full h-[90%] mt-10 overflow-y-auto grid gap-5 grid-cols-[repeat(auto-fill,minmax(20rem,1fr))] auto-rows-min self-start"
+    >
+
+      <div
+        class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
       >
-        <div
-          class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
-        >
-          <div>
-            <img
-              class="w-[14%]"
-              src="./assets/logos/Designer Academy.png"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
+        <div>
+          <img
+            class="w-[14%]"
+            src="./assets/logos/Divahosting.png"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="text-3xl font-bold tracking-wide">Divahosting</div>
+          <div class="flex justify-between items-end">
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Position</div>
+              <div class="text-sm">Moderator</div>
+            </div>
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Member Since</div>
+              <div class="text-sm">February 12, 2023</div>
+            </div>
+            <a href="https://discord.gg/divahosting">
               <button
                 class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium"
               >
                 Visit
               </button>
-            </div>
+            </a>
           </div>
         </div>
-        <div
-          class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
-        >
-          <div>
-            <img
-              class="w-[14%]"
-              src="./assets/logos/Designer Academy.png"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
+      </div>
+
+      <div
+        class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
+      >
+        <div>
+          <img
+            class="w-[14%]"
+            src="./assets/logos/Designers1.png"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="text-3xl font-bold tracking-wide">Designers</div>
+          <div class="flex justify-between items-end">
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Position</div>
+              <div class="text-sm">Developer</div>
+            </div>
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Member Since</div>
+              <div class="text-sm">Apr 24, 2023</div>
+            </div>
+            <a href="https://discord.gg/v6HgWKdsaw">
               <button
                 class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium"
               >
                 Visit
               </button>
-            </div>
+            </a>
           </div>
         </div>
-        <div
-          class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
-        >
-          <div>
-            <img
-              class="w-[14%]"
-              src="./assets/logos/Designer Academy.png"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
+      </div>
+
+      <div
+        class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
+      >
+        <div>
+          <img
+            class="w-[14%]"
+            src="./assets/logos/Hiftie's Workshop.png"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="text-3xl font-bold tracking-wide">Hiftie's Workshop</div>
+          <div class="flex justify-between items-end">
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Position</div>
+              <div class="text-sm">Admin</div>
+            </div>
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Member Since</div>
+              <div class="text-sm">March 5, 2023</div>
+            </div>
+            <a href="https://discord.gg/hiftie">
               <button
                 class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium"
               >
                 Visit
               </button>
-            </div>
+            </a>
           </div>
         </div>
-        <div
-          class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
-        >
-          <div>
-            <img
-              class="w-[14%]"
-              src="./assets/logos/Designer Academy.png"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
+      </div>
+
+      <div
+        class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
+      >
+        <div>
+          <img
+            class="w-[14%]"
+            src="./assets/logos/Azury.png"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="text-3xl font-bold tracking-wide">Azury Industries</div>
+          <div class="flex justify-between items-end">
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Position</div>
+              <div class="text-sm">Suport</div>
+            </div>
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Member Since</div>
+              <div class="text-sm">May 5, 2023</div>
+            </div>
+            <a href="https://discord.gg/azury">
               <button
                 class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium"
               >
                 Visit
               </button>
-            </div>
+            </a>
           </div>
         </div>
-        <div
-          class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
-        >
-          <div>
-            <img
-              class="w-[14%]"
-              src="./assets/logos/Designer Academy.png"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
+      </div>
+
+      <div
+        class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
+      >
+        <div>
+          <img
+            class="w-[14%]"
+            src="./assets/logos/Arcadia.png"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="text-3xl font-bold tracking-wide">Arcadia</div>
+          <div class="flex justify-between items-end">
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Position</div>
+              <div class="text-sm">Moderator</div>
+            </div>
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Member Since</div>
+              <div class="text-sm">April 26, 2023</div>
+            </div>
+            <a href="https://discord.gg/EhdpTr9QuC">
               <button
                 class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium"
               >
                 Visit
               </button>
-            </div>
+            </a>
           </div>
         </div>
-        <div
-          class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
-        >
-          <div>
-            <img
-              class="w-[14%]"
-              src="./assets/logos/Designer Academy.png"
-              alt=""
-            />
-          </div>
-          <div class="flex flex-col gap-3">
-            <div class="text-3xl font-bold tracking-wide">Design Academy</div>
-            <div class="flex justify-between items-end">
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Position</div>
-                <div class="text-sm">Moderator</div>
-              </div>
-              <div>
-                <div class="text-sm opacity-50 tracking-wide">Member Since</div>
-                <div class="text-sm">12 December, 2023</div>
-              </div>
+      </div>
+      <div
+        class="card card1 bg-White h-fit rounded-[2rem] p-5 text-white flex gap-9 flex-col border"
+      >
+        <div>
+          <img
+            class="w-[14%]"
+            src="./assets/logos/Flout's Arcade.png"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-3">
+          <div class="text-3xl font-bold tracking-wide">Flout's Arcade </div>
+          <div class="flex justify-between items-end">
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Position</div>
+              <div class="text-sm">Admin</div>
+            </div>
+            <div>
+              <div class="text-sm opacity-50 tracking-wide">Member Since</div>
+              <div class="text-sm">May 6, 2023</div>
+            </div>
+            <a href="https://discord.gg/UX5ZAG43EU">
               <button
                 class="bg-Off-white rounded-3xl px-4 text-black h-max py-1 font-medium"
               >
                 Visit
               </button>
-            </div>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <!-- GOALS SECTION -->
       <section class="goalSection pointer-events-none opacity-0 absolute flex justify-center items-center w-full self-center">
         <div
-          class="h-[30rem] sm:h-[36rem] w-full sm:w-[28rem] bg-White rounded-xl p-5 text-white shadow-xl space-y-7"
+          class="h-[30rem] sm:h-[36rem] w-full sm:w-[28rem] overflow-y-auto bg-White rounded-xl p-5 text-white shadow-xl space-y-7"
         >
-
-
-
-
 
 
           <div class="completed space-y-2">
             <div class="text-sm tracking-wide opacity-70">Completed</div>
             <div class="completedTasks space-y-2">
-              
+        <!-- ========================================================================================================
+            COMPLETED TASKS
+            =========================================================================================================-->
               
               <div
                 class="border border-yellow flex items-center gap-4 bg-gradient-to-l from-[#B39488] via-[#B3A483] to-[#B39488] p-3 rounded-xl"
@@ -332,10 +350,11 @@
                   <i class="text-xs sm:text-base fa-solid fa-check"></i>
                 </div>
                 <div>
-                  <div class=" leading-5">New Heights</div>
-                  <div class="text-xs sm:text-sm">Staff in a server with 1k+ members</div>
+                  <div class=" leading-5">New Website!</div>
+                  <div class="text-xs sm:text-sm"></div>
                 </div>
               </div>
+
               <div
                 class="border border-yellow flex items-center gap-4 bg-gradient-to-l from-[#B39488] via-[#B3A483] to-[#B39488] p-3 rounded-xl"
               >
@@ -346,19 +365,30 @@
                 </div>
                 <div>
                   <div class=" leading-5">New Heights</div>
-                  <div class="text-xs sm:text-sm">Staff in a server with 1k+ members</div>
+                  <div class="text-xs sm:text-sm">Staff in a server with 2k+ members</div>
                 </div>
               </div>
+
+              <div
+                class="border border-yellow flex items-center gap-4 bg-gradient-to-l from-[#B39488] via-[#B3A483] to-[#B39488] p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">Learned Discord.js</div>
+                  <div class="text-xs sm:text-sm"></div>
+                </div>
+              </div>
+       <!-- =========================================================================================================
+            END OF COMPLETED TASKS
+            =========================================================================================================-->
               
               
             </div>
           </div>
-
-
-
-
-
-
 
 
 
@@ -366,7 +396,9 @@
             <div class="text-sm tracking-wide opacity-70">Ongoing</div>
             <div class="completedTasks space-y-2">
               
-              
+       <!-- =========================================================================================================
+            ONGOING TASKS
+            =========================================================================================================-->
               <div
                 class="border border-[#B59D9D] flex items-center gap-4 bg-Dark-blue p-3 rounded-xl"
               >
@@ -376,10 +408,73 @@
                   <i class="text-xs sm:text-base fa-solid fa-check"></i>
                 </div>
                 <div>
-                  <div class=" leading-5">New Heights</div>
-                  <div class="text-xs sm:text-sm">Staff in a server with 1k+ members</div>
+                  <div class=" leading-5">Moderator in Xavier's High</div>
+                  <div class="text-xs sm:text-sm"></div>
                 </div>
               </div>
+
+
+              <div
+                class="border border-[#B59D9D] flex items-center gap-4 bg-Dark-blue p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">Opened bot Commisions</div>
+                  <div class="text-xs sm:text-sm"></div>
+                </div>
+              </div>
+
+
+              <div
+                class="border border-[#B59D9D] flex items-center gap-4 bg-Dark-blue p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">Learn Figma</div>
+                  <div class="text-xs sm:text-sm"></div>
+                </div>
+              </div>
+
+
+              <div
+                class="border border-[#B59D9D] flex items-center gap-4 bg-Dark-blue p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">Staff in 5000+ server</div>
+                  <div class="text-xs sm:text-sm"></div>
+                </div>
+              </div>
+
+
+              <div
+                class="border border-[#B59D9D] flex items-center gap-4 bg-Dark-blue p-3 rounded-xl"
+              >
+                <div
+                  class="border-2 flex items-center justify-center rounded-full w-6 h-6 sm:w-8 sm:h-8 sm:pt-0 pt-[0.1rem]"
+                >
+                  <i class="text-xs sm:text-base fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class=" leading-5">Staff in 10000+ server</div>
+                  <div class="text-xs sm:text-sm"></div>
+                </div>
+              </div>
+       <!-- =========================================================================================================
+            END OF ONGOING TASKS
+            =========================================================================================================-->
 
             </div>
           </div>
@@ -388,28 +483,31 @@
 
       <!-- CONTACT SECTION -->
       <section class="contactSection pointer-events-none opacity-0 absolute flex justify-center items-center w-full self-center">
-        <div class="h-fit sm:h-fit w-full sm:w-[35rem] bg-White rounded-xl p-4 sm:p-7 text-white shadow-xl relative">
-          <div class="dialogue z-30 hidden absolute w-[25rem] bg-red rounded-lg px-10 py-8 space-y-4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div class="h-fit sm:h-fit w-full sm:w-[35rem] bg-White rounded-xl px-4 py-6 sm:p-5 text-white shadow-xl relative">
+          <div class="dialogue hidden z-40  absolute w-[19rem] sm:w-[25rem] bg-red rounded-lg px-5 py-6 sm:px-10 sm:py-8 space-y-4 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <div class="text-3xl text-center font-semibold text-pastel">Submitted Form!</div>
             <button class="dialogueClose bg-Off-white text-Dark-blue font-medium px-5 py-2 rounded-lg outline-none hover:shadow-lg focus:shadow-lg transition-all mx-auto block">Close</button>
 
           </div>
           <form onsubmit="sendContact(event)" class="flex flex-col gap-4">
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 relative">
               <label for="inpName">Your Name/Discord</label>
-              <input required type="text" id="inpName" onkeyup="checkForNull()" autocomplete="off" class="px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
+              <input required type="text" id="inpName" onkeyup="checkForNull()"  autocomplete="off" class="px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
+              <div class="absolute bottom-0 right-2"><span class="nameValueCount">0</span>/25</div>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 relative">
               <label for="inpEmail">Your email</label>
-              <input required type="email" id="inpEmail" onkeyup="checkForNull()" autocomplete="off" class="px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
+              <input required type="email" id="inpEmail" onkeyup="checkForNull()" class="px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all">
+              <div class="absolute bottom-0 right-2"><span class="emailValueCount">0</span>/40</div>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="flex flex-col gap-2 relative">
               <label for="inpMsg">Leave a Message</label>
               <textarea required name="" id="inpMsg" cols="30" rows="5" onkeyup="checkForNull()" class="resize-none px-4 py-2 sm:py-4 bg-[#c1ced85d] focus:bg-[#c1ced894] focus:shadow-lg outline-none rounded-lg transition-all"></textarea>
+              <div class="absolute bottom-0 right-2"><span class="msgValueCount">0</span>/800</div>
             </div>
             <div class="buttons space-x-3 sm:mt-5">
-              <button class="bg-Off-white text-Dark-blue font-medium px-5 py-2 rounded-lg outline-none hover:shadow-lg focus:shadow-lg transition-all">Send</button>
-              <button disabled class="clearBtn bg-Off-white text-Dark-blue font-medium px-5 py-2 rounded-lg opacity-80 hover:shadow-lg focus:shadow-lg transition-all" onclick="clearText()">Clear</button>
+              <button class="sendBtn disabled:bg-slate-300 disabled:opacity-60 disabled:shadow-none bg-Off-white text-Dark-blue font-medium px-5 py-2 rounded-lg outline-none hover:shadow-lg focus:shadow-lg transition-all">Send</button>
+              <button disabled class="clearBtn disabled:bg-slate-300 disabled:opacity-60 disabled:shadow-none bg-Off-white text-Dark-blue font-medium px-5 py-2 rounded-lg opacity-80 hover:shadow-lg focus:shadow-lg transition-all" onclick="clearText()">Clear</button>
             </div>
           </form>
         </div>

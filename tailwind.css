@@ -15,7 +15,7 @@ input,
 textarea,
 button,
 select,
-a {
+div {
     -webkit-tap-highlight-color: transparent;
 }
 .projectSection{
@@ -64,6 +64,10 @@ a {
     animation-delay: calc(var(--animation-index)*150ms);
     animation-fill-mode: forwards;
 
+}
+.invalid{
+    color: rgb(185, 47, 47);
+    font-weight: 500;
 }
 @keyframes cardIn {
     0%{
